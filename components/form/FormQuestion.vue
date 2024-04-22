@@ -2,7 +2,7 @@
   <div class="space-y-3">
     <template v-if="question.figure && 'image_src' in question.figure">
       <div>
-        <img class="max-h-48 max-w-full mx-auto" :src="question.figure.image_src">
+        <img class="max-h-56 max-w-full mx-auto" :src="question.figure.image_src">
       </div>
     </template>
     <template v-else-if="question.figure && 'data' in question.figure">
@@ -28,10 +28,9 @@
         <p class="text-justify">{{ question.figure.text }}</p>
       </div>
     </template>
-
     
     <div>
-      <h3 class="text-base font-semibold">{{ question.text }}</h3>
+      <h3 class="text-base font-semibold max-md:text-justify mb-2">{{ question.text }}</h3>
       <template v-for="answer in question.answers" :key="answer.uuid">
         <label :for="`answer-${answer.uuid}`" class="flex gap-4 items-center rounded-md hover:bg-blue-50 !cursor-pointer px-4 py-2">
           <input type="radio" :name="`question-${question.uuid}`" :id="`answer-${answer.uuid}`"/>

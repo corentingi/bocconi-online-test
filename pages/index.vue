@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({title: 'Bocconi Online Test Practice'});
+useHead({title: 'Bocconi Online Test Practice'});
 
 const questions: Question[] = [
   {
